@@ -2,6 +2,24 @@ import Section from '../Section';
 import { Mail, Github, Linkedin, Code, Send } from 'lucide-react';
 
 const Contact = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (!name || !email || !message) {
+            alert('Please fill out all fields.');
+            return;
+        }
+
+        const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+        // Open Gmail in a new tab instead of relying on a local email client
+        const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=kinshuksaxena0802@gmail.com&su=${subject}&body=${body}`;
+        window.open(gmailLink, '_blank');
+    };
     return (
         <Section id="contact">
             <div className="max-w-4xl mx-auto">
@@ -17,11 +35,11 @@ const Contact = () => {
                             <p className="text-gray-400">Feel free to reach out for collaborations, opportunities, or just to say hi.</p>
                         </div>
 
-                        <a href="mailto:kinshuksaxena0802@gmail.com" className="flex items-center text-gray-300 hover:text-primary-400 transition-colors group">
-                            <div className="w-12 h-12 bg-dark-700 rounded-full flex items-center justify-center mr-4 group-hover:bg-primary-500/20 transition-colors">
+                        <a href="mailto:kinshuksaxena0802@gmail.com" className="flex items-center text-gray-300 hover:text-primary-400 transition-colors group overflow-hidden">
+                            <div className="w-12 h-12 bg-dark-700 rounded-full flex items-center justify-center mr-4 group-hover:bg-primary-500/20 transition-colors shrink-0">
                                 <Mail className="w-5 h-5" />
                             </div>
-                            <span className="font-medium text-sm md:text-base break-all">kinshuksaxena0802@gmail.com</span>
+                            <span className="font-medium text-sm md:text-base truncate">kinshuksaxena0802@gmail.com</span>
                         </a>
 
                         <div className="flex gap-4 pt-4 border-t border-dark-700">
@@ -38,7 +56,7 @@ const Contact = () => {
                     </div>
 
                     <div className="md:w-2/3">
-                        <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                        <form className="space-y-6" onSubmit={handleSubmit}>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">Name</label>

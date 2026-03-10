@@ -8,55 +8,55 @@ const certifications = [
         title: 'Cybersecurity Academy Orientation',
         issuer: 'Palo Alto Networks Cybersecurity Academy',
         date: 'February 2026',
-        file: '/Cybersecurity_Academy_Onboarding_Certificate.pdf'
+        file: `${import.meta.env.BASE_URL}Cybersecurity_Academy_Onboarding_Certificate.pdf`
     },
     {
         title: 'Cybersecurity Foundation',
         issuer: 'Palo Alto Networks Cybersecurity Academy',
         date: 'March 2026',
-        file: '/Cybersecurity_Foundation_Student_Certificate.pdf'
+        file: `${import.meta.env.BASE_URL}Cybersecurity_Foundation_Student_Certificate.pdf`
     },
     {
         title: 'Cloud Security Fundamentals',
         issuer: 'Palo Alto Networks Cybersecurity Academy',
         date: 'March 2026',
-        file: '/Cloud_Security_Fundamentals_Student_Certificate.pdf'
+        file: `${import.meta.env.BASE_URL}Cloud_Security_Fundamentals_Student_Certificate.pdf`
     },
     {
         title: 'Cloud Security Automation',
         issuer: 'Palo Alto Networks Cybersecurity Academy',
         date: 'March 2026',
-        file: '/_Cloud_Security_Automation_Student_Certificate.pdf'
+        file: `${import.meta.env.BASE_URL}_Cloud_Security_Automation_Student_Certificate.pdf`
     },
     {
         title: 'Network Security Fundamentals',
         issuer: 'Palo Alto Networks Cybersecurity Academy',
         date: 'March 2026',
-        file: '/Network_Security_Fundamentals_Student_Certificate.pdf'
+        file: `${import.meta.env.BASE_URL}Network_Security_Fundamentals_Student_Certificate.pdf`
     },
     {
         title: 'Developer and Technology Job Simulation',
         issuer: 'Accenture (Forage)',
         date: 'January 2025',
-        file: '/Accenture.pdf'
+        file: `${import.meta.env.BASE_URL}Accenture.pdf`
     },
     {
         title: 'Solutions Architecture Job Simulation',
         issuer: 'AWS (Forage)',
         date: 'March 2025',
-        file: '/AWS.pdf'
+        file: `${import.meta.env.BASE_URL}AWS.pdf`
     },
     {
         title: 'Software Engineering Job Simulation',
         issuer: 'Goldman Sachs (Forage)',
         date: 'February 2025',
-        file: '/Goldman Sachs.pdf'
+        file: `${import.meta.env.BASE_URL}Goldman Sachs.pdf`
     },
     {
         title: 'Data Analytics Job Simulation',
         issuer: 'Deloitte (Forage)',
         date: 'March 2025',
-        file: '/Deloitte.pdf'
+        file: `${import.meta.env.BASE_URL}Deloitte.pdf`
     }
 ];
 

@@ -23,7 +23,7 @@ const Hero = () => {
                         <a href="#projects" className="px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-medium transition-colors shadow-lg shadow-primary-500/30">
                             View Projects
                         </a>
-                        <a href="/Cybersecurity_Resume.pdf" download="Cybersecurity_Resume.pdf" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-dark-800 hover:bg-dark-700 border border-dark-700 text-white rounded-lg font-medium transition-colors">
+                        <a href={`${import.meta.env.BASE_URL}Cybersecurity_Resume.pdf`} download="Cybersecurity_Resume.pdf" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-dark-800 hover:bg-dark-700 border border-dark-700 text-white rounded-lg font-medium transition-colors">
                             Download Resume
                         </a>
                     </div>

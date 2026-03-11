@@ -20,10 +20,10 @@ const Hero = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-4 mb-12">
-                        <a href="#projects" className="px-8 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-medium transition-colors shadow-lg shadow-primary-500/30">
+                        <a href="#projects" className="px-8 py-3 bg-primary-500 hover:bg-primary-400 text-white rounded-lg font-medium transition-all duration-300 shadow-lg shadow-primary-500/30 hover:shadow-[0_0_20px_rgba(6,182,212,0.6)] hover:-translate-y-1">
                             View Projects
                         </a>
-                        <a href={`${import.meta.env.BASE_URL}Cybersecurity_Resume.pdf`} download="Cybersecurity_Resume.pdf" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-dark-800 hover:bg-dark-700 border border-dark-700 text-white rounded-lg font-medium transition-colors">
+                        <a href={`${import.meta.env.BASE_URL}Cybersecurity_Resume.pdf`} download="Cybersecurity_Resume.pdf" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-dark-800 hover:bg-dark-700 hover:border-primary-500/50 border border-dark-700 text-white rounded-lg font-medium transition-all duration-300 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] hover:-translate-y-1">
                             Download Resume
                         </a>
                     </div>

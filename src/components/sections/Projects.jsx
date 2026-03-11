@@ -28,7 +28,7 @@ const Projects = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {projects.map((project, idx) => (
-                    <div key={idx} className="glass-effect rounded-2xl overflow-hidden group hover:border-primary-500/50 transition-colors flex flex-col h-full">
+                    <div key={idx} className="glass-effect rounded-2xl overflow-hidden group hover:border-primary-500/50 hover:-translate-y-2 hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] hover:shadow-primary-500/20 transition-all duration-300 flex flex-col h-full">
                         <div className="p-8 flex-1 flex flex-col">
                             <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
 

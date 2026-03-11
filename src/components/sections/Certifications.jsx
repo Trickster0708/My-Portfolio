@@ -62,6 +62,7 @@ const certifications = [
 
 const Certifications = () => {
     const [selectedCert, setSelectedCert] = useState(null);
+    const [hoveredCert, setHoveredCert] = useState(null);
 
     return (
         <Section id="certifications" className="bg-dark-800/30">
@@ -70,12 +71,14 @@ const Certifications = () => {
                 <span className="absolute -bottom-2 left-0 w-1/3 h-1 bg-primary-500 rounded-full"></span>
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
                 {certifications.map((cert, idx) => (
                     <div
                         key={idx}
                         onClick={() => setSelectedCert(cert)}
-                        className="glass-effect p-6 rounded-2xl cursor-pointer hover:border-primary-500/50 hover:-translate-y-1 transition-all group"
+                        onMouseEnter={() => setHoveredCert(idx)}
+                        onMouseLeave={() => setHoveredCert(null)}
+                        className="glass-effect p-6 rounded-2xl cursor-pointer hover:border-primary-500/50 hover:-translate-y-1 transition-all group relative"
                     >
                         <div className="w-12 h-12 rounded-full bg-primary-500/10 flex items-center justify-center mb-4 group-hover:bg-primary-500/20 transition-colors">
                             <Award className="text-primary-400 w-6 h-6" />
@@ -90,6 +93,26 @@ const Certifications = () => {
                                 <FileText size={14} className="mr-1" /> View
                             </span>
                         </div>
+                        
+                        {/* Hover Preview Tooltip */}
+                        <AnimatePresence>
+                            {hoveredCert === idx && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="absolute left-1/2 -translate-x-1/2 bottom-[110%] z-50 w-64 h-48 bg-dark-800 border border-dark-600 rounded-xl overflow-hidden shadow-2xl pointer-events-none hidden md:block"
+                                >
+                                    <iframe
+                                        src={`${cert.file}#toolbar=0&navpanes=0&scrollbar=0`}
+                                        className="w-full h-full border-0 pointer-events-none scale-[0.5] origin-top-left"
+                                        style={{ width: '200%', height: '200%' }}
+                                        title={`${cert.title} preview`}
+                                    />
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                     </div>
                 ))}
             </div>

@@ -71,7 +71,7 @@ const Contact = () => {
                                 <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">Message</label>
                                 <textarea id="message" rows="4" className="w-full bg-dark-900 border border-dark-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary-500 transition-colors resize-none" placeholder="Your message here..."></textarea>
                             </div>
-                            <button className="w-full flex items-center justify-center bg-primary-500 hover:bg-primary-600 text-white font-semibold py-4 rounded-lg transition-colors group">
+                            <button className="w-full flex items-center justify-center bg-primary-500 hover:bg-primary-400 text-white font-semibold py-4 rounded-lg transition-all duration-300 shadow-lg shadow-primary-500/20 hover:shadow-[0_0_20px_rgba(6,182,212,0.6)] hover:-translate-y-1 group">
                                 Send Message
                                 <Send size={18} className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </button>

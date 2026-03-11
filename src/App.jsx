@@ -12,8 +12,12 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-dark-900 min-h-screen selection:bg-primary-500/30">
-      <div className="fixed inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-[0.03] pointer-events-none"></div>
+    <div className="bg-dark-900 min-h-screen selection:bg-primary-500/30 relative text-gray-100">
+      {/* Ambient glassmorphic glowing backgrounds */}
+      <div className="fixed top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary-600/10 blur-[120px] pointer-events-none z-0"></div>
+      <div className="fixed bottom-[-10%] right-[-5%] w-[40%] h-[50%] rounded-full bg-blue-600/10 blur-[130px] pointer-events-none z-0"></div>
+      
+      <div className="fixed inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-[0.03] pointer-events-none z-0"></div>
 
       <NavBar />
 

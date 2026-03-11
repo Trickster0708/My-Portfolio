@@ -12,13 +12,13 @@ export default {
             },
             colors: {
                 dark: {
-                    900: '#121212',
-                    800: '#1A1A1A',
-                    700: '#2A2A2A',
+                    900: '#020617',
+                    800: '#0f172a',
+                    700: '#1e293b',
                 },
                 primary: {
-                    500: '#3B82F6', // Blue as primary accent
-                    400: '#60A5FA',
+                    500: '#06b6d4', // Cyan accent
+                    400: '#22d3ee',
                 }
             }
         },

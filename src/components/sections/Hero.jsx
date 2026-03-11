@@ -29,7 +29,7 @@ const Hero = () => {
                     </div>
 
                     <div className="flex gap-6 items-center">
-                        <a href="mailto:kinshuksaxena0802@gmail.com" className="text-gray-400 hover:text-white transition-colors" aria-label="Email">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kinshuksaxena0802@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="Email">
                             <Mail size={24} />
                         </a>
                         <a href="https://www.linkedin.com/in/kinshuk-saxena-01535632a/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors" aria-label="LinkedIn">

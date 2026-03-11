@@ -15,7 +15,7 @@ const toolCategories = [
     {
         title: 'Network Analysis',
         icon: <Activity className="w-6 h-6 text-primary-500 mb-4" />,
-        tools: ['Wireshark', 'tcpdump']
+        tools: ['Wireshark', 'tcpdump', 'Nmap', 'zeek']
     },
     {
         title: 'Password Auditing Tools',

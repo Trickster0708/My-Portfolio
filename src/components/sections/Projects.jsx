@@ -15,6 +15,13 @@ const projects = [
         description: 'Developed a modern coffee-themed website featuring responsive design and engaging UI sections. Optimized performance for fast loading and ensured seamless cross-device compatibility.',
         github: 'https://github.com/Trickster0708/Coffee-is-all-you-need',
         live: 'https://coffee-is-all-you-need.vercel.app/'
+    },
+    {
+        title: 'PhishTracker – Phishing Simulation & Awareness Platform',
+        tech: ['Python', 'Flask', 'SQLite', 'HTML', 'CSS', 'JavaScript', 'Vercel'],
+        description: 'Built a full-stack cybersecurity platform for phishing simulation and security awareness training. Features include campaign management, real-time email tracking, click analytics, a modern dashboard with charts, and an awareness module — all secured with role-based authentication.',
+        github: 'https://github.com/Trickster0708/Phishing-Simulation-Tool---PhishTracker',
+        live: 'https://phishtracker-b7fcsou6q-trickster0708s-projects.vercel.app/login?next=%2Fdashboard'
     }
 ];
 
